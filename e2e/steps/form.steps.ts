@@ -16,20 +16,23 @@ When('I set my activity {string}', (activity) => {
   page.setActivity(activity);
 });
 
-When('I set my start date {string}', function (startDate) {
+When('I set my start date {string}', (startDate) => {
   page.setStartDate(startDate);
 });
 
-When('I set my end date {string}', function (endDate) {
+When('I set my end date {string}', (endDate) => {
   page.setStartDate(endDate);
 });
 
-When('I set my status {word}', function (status) {
+When('I set my status {word}', (status) => {
   page.setStatus(status);
 });
 
-Then('I click on save button and go to the next page', () => {
+When('I click on save button', () => {
   page.clickOnSave();
+});
+
+Then('I\'m redirected to result page', () => {
   page.nextPage().then(url => {
     expect(url).to.equal(browser.baseUrl + '/result');
   });

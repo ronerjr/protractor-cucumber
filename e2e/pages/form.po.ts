@@ -49,14 +49,6 @@ export class FormPage {
     this.cancelButton.click();
   }
 
-  // fillForm(project) {
-  //   this.setTeam(project.team);
-  //   this.setActivity(project.activity);
-  //   this.setStartDate(project.startDate);
-  //   this.setEndDate(project.endDate);
-  //   this.selectStatus(project.status);
-  // }
-
   nextPage() {
     return browser.getCurrentUrl();
   }

@@ -1,7 +1,6 @@
-Feature: Search
-  As a developer using Angular
-  I need to look-up classes and guidelines
-  So that I can concentrate on building awesome applications
+Feature: Form
+  As an user
+  I want to be able to fill my form
 
   Scenario Outline: Saving a form filled with valid data
     Given I am on the form
@@ -10,7 +9,8 @@ Feature: Search
     And I set my start date <startDate>
     And I set my end date <endDate>
     And I set my status <status>
-    Then I click on save button and go to the next page
+    And I click on save button
+    Then I'm redirected to result page
 
     Examples:
       | team     | activity              | startDate    | endDate      | status |
